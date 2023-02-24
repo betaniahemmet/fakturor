@@ -22,7 +22,7 @@ Gif to demo project.
 
 <br />
 
-![Website preview](fakturor/media/demo.gif)
+![Website preview](https://github.com/betaniahemmet/fakturor/blob/main/media/demo.gif)
 
 <br />
 
