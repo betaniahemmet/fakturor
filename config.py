@@ -6,4 +6,3 @@ invoices_path = Path(
 jobs_path = Path(
     r"C:/Path/to/where/the/invoices/should/go"
 )  # The path to where the invoices go when ready
-
