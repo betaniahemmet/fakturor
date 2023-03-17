@@ -42,7 +42,6 @@ def clean_out_folder(a_path):
     return "Folder is clean"
 
 
-
 def create_invoices(num_invoices):
     """Put three random invoices in job folder"""
     clean_out_folder(jobs_path)  # Remove old invoices if present
@@ -51,5 +50,5 @@ def create_invoices(num_invoices):
         files, num_invoices
     )  # Choose two or three files at random
     for file in rand_files:
-        manipulate_sheet(file)  # Change the quantities of goods in the invoices
-        #copy(file, jobs_path)  # Copy the invoices to where they should be
+        manipulate_sheet(file)  # Change quantities of goods in the invoices
+        # copy(file, jobs_path)  # Copy the invoices to where they should be
