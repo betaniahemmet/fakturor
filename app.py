@@ -1,6 +1,5 @@
 from flask import Flask, flash, request, render_template, url_for, redirect
-from invoice_functions import create_invoices
-from time import sleep
+from file_functions import create_invoices
 
 app = Flask(__name__)
 app.secret_key = "askimsviken"
@@ -10,7 +9,6 @@ app.secret_key = "askimsviken"
 def index():
     if request.method == "POST":
         try:
-
             if request.form.get("2_fakturor") == "Skapa 2 fakturor":
                 create_invoices(2)
                 flash("Du har skapat 2 fakturor")
@@ -24,8 +22,10 @@ def index():
 
     elif request.method == "GET":
         return render_template("index.html")
-    
-    return redirect(url_for("index")) # Instead of render_template, so that it won't send again if refreshed
+
+    return redirect(
+        url_for("index")
+    )  # Instead of render_template, so that it won't send again if refreshed
 
 
 if __name__ == "__main__":
