@@ -159,11 +159,11 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-.invoices/
-.invoices
-invoices/
-invoices
-.jobb/
-.jobb
-jobb/
-jobb
+#.invoices/
+#.invoices
+#invoices/
+#invoices
+#.jobb/
+#.jobb
+#jobb/
+#jobb

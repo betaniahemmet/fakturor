@@ -52,4 +52,4 @@ def create_invoices(num_invoices):
     )  # Choose two or three files at random
     for file in rand_files:
         manipulate_sheet(file)  # Change the quantities of goods in the invoices
-        copy(file, jobs_path)  # Copy the invoices to where they should be
+        #copy(file, jobs_path)  # Copy the invoices to where they should be
