@@ -29,19 +29,22 @@ $
 $ # Install requirements (Windows)
 $ pip install -r requirements.txt
 $
+$ # Change the paths in config.py to reflect the paths to
+$ # to the folders in your system
+$
 $ # Start the app (Windows)
 $ python app.py
-$ 
+$
 $ # Access the UI in browser: 
 $ http://localhost:5000/
 $
 $
-$ # ...or preferably get your network technician
+$ """ ...or preferably get your network technician
 $ to manually assign a static IP to the MAC address
 $ of the computer running this. That IP can then be
 $ used in any browser in the same network. If this is
 $ not done, the DHCP might assign a different IP
-$ when the computer is restarted.
+$ when the computer is restarted."""
 ```
 
 <br />
