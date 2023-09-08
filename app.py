@@ -1,9 +1,10 @@
 from flask import Flask, flash, request, render_template, url_for, redirect
 from file_functions import create_invoices
 from waitress import serve
+from config import secret
 
 app = Flask(__name__)
-app.secret_key = "askimsviken"
+app.secret_key = secret
 
 
 @app.route("/", methods=["GET", "POST"])
