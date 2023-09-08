@@ -1,8 +1,13 @@
 
 # Script för att skapa och flytta fakturor, för ett sk "luftjobb"
 
-Detta projekt använder Python, openpyxl, flask och waitress för att tillhandahålla två knappar i en webläsare i samma nätverk som projektet körs. Knapparna kommer att flytta två eller tre "fakturor" i xlsx-format samt ändra kvantiteterna på de "inhandlade" varorna. Be nätverksteknikern om att få fast ip till datorn som kör detta så blir det lätt att hålla ordning på vilket ip som ska skrivas in i webläsaren för att nå webgränssnittet. Pga waitress så bör man använda windows. 
+Detta projekt använder Python, openpyxl, flask och waitress för att tillhandahålla två knappar i en webläsare i samma nätverk som projektet körs. Knapparna kommer att flytta två eller tre "fakturor" i xlsx-format samt ändra kvantiteterna på de "inhandlade" varorna.
 <br />
+Be nätverksteknikern om att få fast ip till datorn som kör detta så blir det lätt att hålla ordning på vilket ip som ska skrivas in i webläsaren för att nå webgränssnittet. Pga waitress så bör man använda windows.
+<br />
+Om man vill starta appen automatiskt så skapar man en genväg av RunScript.vbs och lägger genvägen i startup mappen för windows. Då startar den "tyst", samtidigt som windows, utan att det kommer upp något fönster.
+<br />
+
 
 ## The web interface
 
