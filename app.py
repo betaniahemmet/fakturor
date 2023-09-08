@@ -1,5 +1,6 @@
 from flask import Flask, flash, request, render_template, url_for, redirect
 from file_functions import create_invoices
+from waitress import serve
 
 app = Flask(__name__)
 app.secret_key = "askimsviken"
@@ -29,4 +30,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0")
+    serve(app, port=5000, host='0.0.0.0')
