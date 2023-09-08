@@ -29,7 +29,7 @@ $
 $ # Install requirements (Windows)
 $ pip install -r requirements.txt
 $
-$ # Change the paths in config.py to reflect the paths to
+$ # Change the paths in config.py to reflect the paths
 $ # to the folders in your system
 $
 $ # Start the app (Windows)
