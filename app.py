@@ -11,6 +11,10 @@ app.secret_key = secret
 def index():
     if request.method == "POST":
         try:
+            if request.form.get("1_faktura") == "Skapa 1 faktura":
+                create_invoices(1)
+                flash("Du har skapat en faktura")
+
             if request.form.get("2_fakturor") == "Skapa 2 fakturor":
                 create_invoices(2)
                 flash("Du har skapat 2 fakturor")

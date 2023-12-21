@@ -19,7 +19,7 @@ def manipulate_sheet(file):
     sheet["F9"] = randint(123456, 789123)
 
     # change quantities to random numbers between one and ten
-    cellnumbers = [i for i in range(15, 27)]
+    cellnumbers = [i for i in range(16, 27)]
     for i in cellnumbers:
         sheet["E" + str(i)] = randint(1, 10)
 

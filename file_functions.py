@@ -6,7 +6,7 @@ import random
 
 
 def choose_files(files, num_invoices):
-    """Pick two or three files at random"""
+    """Pick one, two or three files at random"""
     rand_numbers = random.sample(range(len(files)), num_invoices)
     rand_files = [files[i] for i in rand_numbers]
     return rand_files
