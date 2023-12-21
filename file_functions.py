@@ -43,12 +43,20 @@ def clean_out_folder(a_path):
 
 
 def create_invoices(num_invoices):
-    """Put three random invoices in job folder"""
+    """Put one, two or three random invoices in job folder"""
+    counter()
     clean_out_folder(jobs_path)  # Remove old invoices if present
     files = take_inventory(invoices_path)  # Get the paths to the templates
     rand_files = choose_files(
         files, num_invoices
-    )  # Choose two or three files at random
+    )  # Choose files at random
     for file in rand_files:
         manipulate_sheet(file)  # Change quantities of goods in the invoices
         # copy(file, jobs_path)  # Copy the invoices to where they should be
+
+
+def counter():
+    """Log usage of script"""
+    with open('usage.txt', 'a') as f:
+        f.write("ping \n")
+
