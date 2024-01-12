@@ -9,5 +9,9 @@ jobs_path = Path(
 images_path = Path(
     r"C:/Users/henri/Documents/code/fakturor/images"
 )  # The path to the images for the invoices
+mag_path = Path(
+    r"C:/Users/henri/Documents/code/fakturor/orders"
+)  # The path to orders
+
 
 secret = 'askimsviken'

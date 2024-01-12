@@ -1,5 +1,5 @@
 from flask import Flask, flash, request, render_template, url_for, redirect
-from file_functions import create_invoices
+from file_functions import create_invoices, magnus_order
 from waitress import serve
 from config import secret
 
@@ -22,6 +22,10 @@ def index():
             if request.form.get("3_fakturor") == "Skapa 3 fakturor":
                 create_invoices(3)
                 flash("Du har skapat 3 fakturor")
+
+            if request.form.get("magnus") == "Magnusson & Freij":
+                magnus_order()
+                flash("Du har skapat en beställning till M&F")
 
         except Exception as e:
             flash(str(e))
