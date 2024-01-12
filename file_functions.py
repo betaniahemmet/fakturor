@@ -1,6 +1,6 @@
 import os
 from workbook_functions import manipulate_sheet
-from config import invoices_path, jobs_path
+from config import invoices_path, jobs_path, mag_path
 import shutil
 import random
 
@@ -53,6 +53,13 @@ def create_invoices(num_invoices):
     for file in rand_files:
         manipulate_sheet(file)  # Change quantities of goods in the invoices
         # copy(file, jobs_path)  # Copy the invoices to where they should be
+
+def magnus_order():
+    """Make order for M&F"""
+    counter()
+    clean_out_folder(jobs_path)  # Remove old invoices if present
+    file = take_inventory(mag_path)
+    manipulate_sheet(file[0])
 
 
 def counter():
