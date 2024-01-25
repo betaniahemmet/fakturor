@@ -1,8 +1,9 @@
 import os
-from workbook_functions import manipulate_sheet
-from config import invoices_path, jobs_path, mag_path
-import shutil
 import random
+import shutil
+
+from .workbook_functions import manipulate_sheet
+from .config import invoices_path, jobs_path, mag_path
 
 
 def choose_files(files, num_invoices):
