@@ -1,5 +1,5 @@
 from PIL import Image
-from config import images_path
+from .config import images_path
 import os
 
 

@@ -1,14 +1,13 @@
-from flask import Flask, flash, request, render_template, url_for, redirect
-from file_functions import create_invoices, magnus_order
-from waitress import serve
-from config import secret
+from flask import Blueprint, current_app, flash, render_template, url_for, redirect, request
 
-app = Flask(__name__)
-app.secret_key = secret
+from .file_functions import create_invoices, magnus_order
 
+main_blueprint = Blueprint('main', __name__)
 
-@app.route("/", methods=["GET", "POST"])
+@main_blueprint.route("/", methods=["GET", "POST"])
 def index():
+    app = current_app  # Access the current Flask app instance
+
     if request.method == "POST":
         try:
             if request.form.get("1_faktura") == "Skapa 1 faktura":
@@ -34,9 +33,5 @@ def index():
         return render_template("index.html")
 
     return redirect(
-        url_for("index")
+        url_for("main.index")
     )  # Instead of render_template, so that it won't send again if refreshed
-
-
-if __name__ == "__main__":
-    serve(app, port=5000, host='0.0.0.0')

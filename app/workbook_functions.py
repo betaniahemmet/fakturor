@@ -1,6 +1,6 @@
 from openpyxl import load_workbook, drawing
 from random import randint
-from config import jobs_path, images_path
+from .config import jobs_path, images_path
 
 """Load a workbook, change quantities, save workbook"""
 
