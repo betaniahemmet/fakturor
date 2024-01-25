@@ -5,6 +5,7 @@ from .file_functions import create_invoices, magnus_order
 from .routes import main_blueprint
 from .config import secret
 
+
 def create_app():
     app = Flask(__name__)
     app.secret_key = secret
@@ -13,4 +14,3 @@ def create_app():
     app.register_blueprint(main_blueprint)
 
     return app
-

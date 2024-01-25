@@ -48,12 +48,11 @@ def create_invoices(num_invoices):
     counter()
     clean_out_folder(jobs_path)  # Remove old invoices if present
     files = take_inventory(invoices_path)  # Get the paths to the templates
-    rand_files = choose_files(
-        files, num_invoices
-    )  # Choose files at random
+    rand_files = choose_files(files, num_invoices)  # Choose files at random
     for file in rand_files:
         manipulate_sheet(file)  # Change quantities of goods in the invoices
         # copy(file, jobs_path)  # Copy the invoices to where they should be
+
 
 def magnus_order():
     """Make order for M&F"""
@@ -65,6 +64,5 @@ def magnus_order():
 
 def counter():
     """Log usage of script"""
-    with open('usage.txt', 'a') as f:
+    with open("usage.txt", "a") as f:
         f.write("ping \n")
-

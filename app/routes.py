@@ -1,8 +1,17 @@
-from flask import Blueprint, current_app, flash, render_template, url_for, redirect, request
+from flask import (
+    Blueprint,
+    current_app,
+    flash,
+    render_template,
+    url_for,
+    redirect,
+    request,
+)
 
 from .file_functions import create_invoices, magnus_order
 
-main_blueprint = Blueprint('main', __name__)
+main_blueprint = Blueprint("main", __name__)
+
 
 @main_blueprint.route("/", methods=["GET", "POST"])
 def index():
