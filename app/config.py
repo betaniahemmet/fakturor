@@ -1,6 +1,7 @@
 from pathlib import Path
 
-fakturor_path = Path(r"C:/Users/henri/Documents/code/fakturor/")
+fakturor_path = Path(__file__).parents[1]  # The path to fakturor folder
+
 invoices_path = fakturor_path / "invoices"  # The path to invoices templates
 
 jobs_path = fakturor_path / "jobb"  # The path to where the invoices go when ready
