@@ -1,7 +1,6 @@
-import os
 import random
 import shutil
-
+from pathlib import Path
 from .workbook_functions import manipulate_sheet
 from .config import invoices_path, jobs_path, mag_path
 
@@ -39,7 +38,7 @@ def clean_out_folder(a_path):
     files = take_inventory(a_path)
     if files:
         for i in files:
-            os.remove(i)
+            Path.unlink(i)
     return "Folder is clean"
 
 
