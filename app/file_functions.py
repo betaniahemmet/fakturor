@@ -63,5 +63,11 @@ def magnus_order():
 
 def counter():
     """Log usage of script"""
-    with open("usage.txt", "a") as f:
-        f.write("ping \n")
+    try:
+        with open("usage.txt", "r") as f:
+            current_number = int(f.readline()) # Read number from file
+    except FileNotFoundError:
+        current_number = 0
+
+    with open("usage.txt", "w") as f:
+        f.write(str(current_number + 1))  # Add one to current number and write or create usage file
