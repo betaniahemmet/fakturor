@@ -44,7 +44,7 @@ def clean_out_folder(a_path):
 
 def create_invoices(num_invoices):
     """Put one, two or three random invoices in job folder"""
-    counter()
+    print(f"Jobs path is set to: {jobs_path}")
     clean_out_folder(jobs_path)  # Remove old invoices if present
     files = take_inventory(invoices_path)  # Get the paths to the templates
     rand_files = choose_files(files, num_invoices)  # Choose files at random
@@ -55,19 +55,6 @@ def create_invoices(num_invoices):
 
 def magnus_order():
     """Make order for M&F"""
-    counter()
     clean_out_folder(jobs_path)  # Remove old invoices if present
     file = take_inventory(mag_path)
     manipulate_sheet(file[0])
-
-
-def counter():
-    """Log usage of script"""
-    try:
-        with open("usage.txt", "r") as f:
-            current_number = int(f.readline()) # Read number from file
-    except FileNotFoundError:
-        current_number = 0
-
-    with open("usage.txt", "w") as f:
-        f.write(str(current_number + 1))  # Add one to current number and write or create usage file

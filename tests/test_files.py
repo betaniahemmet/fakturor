@@ -1,6 +1,6 @@
 import pytest
-from ..app.config import invoices_path, jobs_path, mag_path, test_temp_folder_path
-from ..app.file_functions import (
+from fakturor.app.config import invoices_path, jobs_path, mag_path, test_temp_folder_path
+from fakturor.app.file_functions import (
     choose_files,
     take_inventory,
     copy,

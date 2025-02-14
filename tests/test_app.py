@@ -1,7 +1,6 @@
 import pytest
 from fakturor.app.routes import main_blueprint
 from fakturor.app.app import create_app
-
 """
 GIVEN a flask application for testing
 WHEN the '/' page is requested (GET)

@@ -36,8 +36,8 @@ def manipulate_sheet(file):
         img.anchor = "E4"
         sheet.add_image(img)
 
-    except FileNotFoundError:
-        print("File not found")
+    except Exception as e:
+        print(f"Skipping image {image}: {e}")
 
     # save workbook
     save_path = f"{jobs_path}\\{no_path_file_name}"
